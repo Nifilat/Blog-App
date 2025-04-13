@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<h1>Comment</h1>
 
-<%= render @comment %>
+<p><%= @comment.body %></p>
+<small>Posted on <%= @comment.created_at.strftime("%b %d, %Y at %I:%M %p") %></small>
 
-<div>
-  <%= link_to "Edit this comment", edit_comment_path(@comment) %> |
-  <%= link_to "Back to comments", comments_path %>
-
-  <%= button_to "Destroy this comment", @comment, method: :delete %>
+<div style="margin-top: 20px;">
+  <%= link_to "Edit", edit_comment_path(@comment), class: "button-link" %>
+  <%= link_to "Back", comments_path, class: "button-link" %>
+  <%= button_to "Delete", @comment, method: :delete, data: { confirm: "Are you sure?" }, class: "button-link red" %>
 </div>

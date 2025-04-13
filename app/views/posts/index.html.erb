@@ -1,16 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<h1>All Posts</h1>
 
-<% content_for :title, "Posts" %>
+<%= link_to "➕ New Post", new_post_path, class: "button-link green" %>
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+<% @posts.each do |post| %>
+  <div class="post-card">
+    <h2><%= link_to post.title, post_path(post), class: "post-link" %></h2>
+    <p><%= truncate(post.body, length: 150) %></p>
+    <%= link_to "Read More →", post_path(post), class: "button-link" %>
+  </div>
+<% end %>

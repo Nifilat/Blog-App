@@ -8,3 +8,62 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ /*
+ *= require_self
+ *= require blog
+ */
+
+/* Optional global resets or common layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fefefe;
+    margin: 0;
+    padding: 20px;
+    color: #212529;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  button, input[type="submit"] {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Link buttons */
+  .button-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .button-link.green {
+    background-color: #28a745;
+  }
+  
+  .button-link.red {
+    background-color: #dc3545;
+  }
+  
+  .button-link:hover {
+    opacity: 0.9;
+  }
+
+
+
+
